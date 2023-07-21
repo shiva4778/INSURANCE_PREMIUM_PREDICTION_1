@@ -28,7 +28,6 @@ def submit():
         smoker=(request.form['smoker'])
         region=(request.form['region'])
         print('data captured:',age,sex,bmi,children,smoker,region)
-        logging.info(age,sex,bmi,children,smoker,region)
         features=CustomData(age=age,sex=sex,bmi=bmi,children=children,smoker=smoker,region=region).get_data_as_data_frame()
         predicted_value=PredictPipeline().predict(features)
 
