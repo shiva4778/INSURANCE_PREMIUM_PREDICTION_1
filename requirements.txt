@@ -1,6 +1,7 @@
 numpy
 pandas 
 sklearn
+matplotlib
 Flask
 PyYaml
 dill
