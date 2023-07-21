@@ -17,19 +17,6 @@ def success(score):
     return render_template('result.html',result=score)
 
 
-@application.route('/fail/<int:score>')
-def fail(score):
-    return "The Person has failed and the marks is "+ str(score)
-
-### Result checker
-@application.route('/results/<int:marks>')
-def results(marks):
-    result=""
-    if marks<50:
-        result='fail'
-    else:
-        result='success'
-    return redirect(url_for(result,score=marks))
 
 ### Result checker submit html page
 @application.route('/submit',methods=['POST','GET'])
