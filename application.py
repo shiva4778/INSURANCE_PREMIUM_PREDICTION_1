@@ -1,7 +1,7 @@
 import re
 from flask import Flask, request
 from insurance.util.util import read_yaml_file, write_yaml_file
-from matplotlib.style import context
+# from matplotlib.style import context
 from insurance.logger import logging
 from insurance.exception import InsuranceException
 import os, sys
