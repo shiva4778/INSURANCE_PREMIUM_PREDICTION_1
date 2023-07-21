@@ -12,7 +12,10 @@ def welcome():
 
 @application.route('/success/<int:score>')
 def success(score):
+    
+
     return render_template('result.html',result=score)
+
 ### Result checker submit html page
 @application.route('/submit',methods=['POST','GET'])
 def submit():
@@ -30,8 +33,8 @@ def submit():
         predicted_value=PredictPipeline().predict(features)
 
         
-    return render_template('result.html',result=predicted_value[0])
-    #return redirect(url_for('success',score=predicted_value))
+    
+    return redirect(url_for('success',score=predicted_value))
 
     
 
