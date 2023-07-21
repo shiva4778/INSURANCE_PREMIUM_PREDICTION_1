@@ -5,7 +5,6 @@ import dill
 import os,sys
 from insurance.constant import *
 from insurance.exception import InsuranceException
-import os,sys
 import numpy as np
 
 def write_yaml_file(file_path:str,data:dict=None):

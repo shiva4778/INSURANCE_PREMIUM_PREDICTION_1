@@ -1,120 +1,45 @@
-{% extends 'header.html' %}
+<!DOCTYPE html>
+<html>
+<body>
+<h2>HTML Forms</h2>
 
-{% block head %}
+<form action="/submit" method="post">
+  <label for="age">age:</label><br>
+  <input type="text" id="age" name="age" value="0"><br>
 
+  <label for="sex">sex:</label><br>
+  <select class="form-control" id="sex" name="sex" required>
+    <option value="">Select sex</option>
+    <option value="male">male</option>
+    <option value="female">female</option>
+  </select><br><br>
 
-<title>Index</title>
-<style>
+  <label for="bmi">bmi:</label><br>
+  <input type="text" id="bmi" name="bmi" value="0"><br><br>
 
-</style>
+  <label for="children">children:</label><br>
+  <input type="text" id="children" name="children" value="0"><br><br>
 
-{% endblock %}
+  <label for="smoker">Are you a smoker?</label><br>
+  <select class="form-control" id="smoker" name="smoker" required>
+    <option value="">Select</option>
+    <option value="yes">yes</option>
+    <option value="no">no</option>
+  </select><br><br>
 
-{% block content %}
+  <label for="region">region:</label><br>
+  <select class="form-control" id="region" name="region" required>
+    <option value="">Select Region</option>
+    <option value="northeast">northeast</option>
+    <option value="southwest">southwest</option>
+    <option value="northwest">northwest</option>
+    <option value="southeast">southeast</option>
+  </select><br><br>
 
-<div class="container">
-   
-      <div class="row" style="width: 100%; height: 60%;">
-        <div class="card-header">
-            Welcome to Health Insurance Premium Prediction.
-        </div>
-      
-    </div>
-    <div class="row">
+  <input type="submit" value="Submit">
+</form>
 
-        <div class="col-md-4 col-lg-4 col-sm-12"  style="margin-bottom:20px;">
-            <div class="card">
-                <div class="card-header">
-                  Estimate Premium price
-                </div>
-                <div class="card-body">
-            
-                    <h5 class="card-title">Access Insurance Premium Estimator</h5>
-                    <p class="card-text"> Submit the form to get estimated price for Insurance.</p>
-                    <a class="btn btn-primary" href="/predict">Get Estimated Price</a>
-                </div>
-            </div>
-            </div>
-    
-            <div class="col-md-4 col-lg-4 col-sm-12">
-                <div class="card">
-                    <div class="card-header">
-                        View Logs
-                    </div>
-                    <div class="card-body">
-                
-                        <h5 class="card-title">Log Files</h5>
-                        <p class="card-text">All model training log file can be downloaded.</p>
-                        <a class="btn btn-primary" href="/logs">Check Logs</a>
-                    </div>
-                </div>
-                </div>
-                
-                
-                <div class="col-md-4 col-lg-4 col-sm-12" style="margin-bottom:20px;">
-                    <div class="card">
-                        <div class="card-header">
-                            View Artifacts
-                        </div>
-                        <div class="card-body">
-                    
-                            <h5 class="card-title">Artifact Files</h5>
-                            <p class="card-text">All model artifacts file can be downloaded.</p>
-                            <a class="btn btn-primary" href="/artifact">Check Artifacts</a>
-                        </div>
-                    </div>
-                    </div>
+<p>If you click the "Submit" button, the form-data will be sent to a page called "/submit".</p>
 
-                
-                    <div class="col-md-4 col-lg-4 col-sm-12"  style="margin-bottom:20px;">
-                        <div class="card">
-                            <div class="card-header">
-                                Train Health Insurance Premium estimator model.
-                            </div>
-                            <div class="card-body">
-                        
-                                <h5 class="card-title">Initiate Model Training.</h5>
-                                <p class="card-text">Model training can be initiated using this section.</p>
-                                <a class="btn btn-danger" href="/train">Initiate Training</a>
-                            </div>
-                        </div>
-                        </div>
-                    
-                        <div class="col-md-4 col-lg-4 col-sm-12"  style="margin-bottom:20px;">
-                            <div class="card">
-                                <div class="card-header">
-                                    View Trained Models
-                                </div>
-                                <div class="card-body">
-                            
-                                    <h5 class="card-title">Trained Models</h5>
-                                    <p class="card-text">All model file can be downloaded.</p>
-                                    <a class="btn btn-primary" href="/saved_models">Check Models</a>
-                                </div>
-                            </div>
-                            </div>
-
-                            <div class="col-md-4 col-lg-4 col-sm-12"  style="margin-bottom:20px;">
-                                <div class="card">
-                                    <div class="card-header">
-                                        View Experiment History
-                                    </div>
-                                    <div class="card-body">
-                                
-                                        <h5 class="card-title"> Experiment History</h5>
-                                        <p class="card-text">All  Experiment History can be checked.</p>
-                                        <a class="btn btn-primary" href="/view_experiment_hist">Check Experiment History</a>
-                                    </div>
-                                </div>
-                                </div>
-        
-        
-        
-        
-                    
-        </div>
-  </div>  
-
-
-
-{% endblock %}
+</body>
+</html>

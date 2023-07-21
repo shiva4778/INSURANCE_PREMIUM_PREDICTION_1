@@ -1,11 +1,15 @@
 import sys
 import pandas as pd
+import numpy as np
+from insurance.constant import *
 from insurance.exception import InsuranceException
-from insurance.util import load_object
-import os
-import sys
+from insurance.util.util import load_object
+from insurance.logger import logging
+from insurance.entity.artifact_entity import ModelEvaluationArtifact,DataTransformationArtifact
 
-age,sex,bmi,children,smoker,region,expenses
+import os,sys
+
+
 
 class PredictPipeline:
     def __init__(self):
@@ -13,14 +17,19 @@ class PredictPipeline:
 
     def predict(self,features):
         try:
-            model_path=os.path.join("artifacts","model.pkl")
-            preprocessor_path=os.path.join('artifacts','preprocessed.pkl')
+            
             print("Before Loading")
-            model=load_object(file_path=model_path)
-            preprocessor=load_object(file_path=preprocessor_path)
-            print("After Loading")
-            data_scaled=preprocessor.transform(features)
-            preds=model.predict(data_scaled)
+            preprocessor_file_path=r'E:\Insurance_premium_prediction\insurance\artifact\data_transformation\2023-07-16-22-13-24\preprocessed\preprocessed.pkl'
+            model_file_path=r'E:\Insurance_premium_prediction\saved_models\20230707211336\model.pkl'
+            logging.info(features)
+            preprocessor=load_object(file_path=preprocessor_file_path)
+            model=load_object(file_path=model_file_path)
+            logging.info('after loading')
+            # Convert the input features to a pandas DataFrame with a single sample
+            
+
+   
+            preds = model.predict((features))
             return preds
         
         except Exception as e:
@@ -52,6 +61,7 @@ class CustomData:
         
 
     def get_data_as_data_frame(self):
+        logging.info('get_data_as_data_frame')
         try:
             custom_data_input_dict = {
                 "age": [self.age],
@@ -62,8 +72,11 @@ class CustomData:
                 "region": [self.region]
                
             }
+            s=pd.DataFrame(custom_data_input_dict)
+            logging.info(pd.DataFrame(custom_data_input_dict))
+            print(s.head())
 
-            return pd.DataFrame(custom_data_input_dict)
+            return pd.DataFrame(custom_data_input_dict,columns=['age', 'sex', 'bmi', 'children', 'smoker', 'region'])
 
         except Exception as e:
             raise InsuranceException(e, sys) from e

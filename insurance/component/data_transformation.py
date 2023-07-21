@@ -61,8 +61,8 @@ class DataTransformation:
             schema_file_path=self.data_validation_artifact.schema_file_path
 
             dataset_schema=read_yaml_file(file_path=schema_file_path)
-            numerical_columns=dataset_schema[NUMERICAL_COLUMN_KEY]
-            categorical_columns=dataset_schema[CATEGORICAL_COLUMN_KEY]
+            numerical_columns=['age', 'bmi', 'children']
+            categorical_columns=['sex', 'smoker', 'region']
 
             num_pipeline=Pipeline(steps=[
                     ('imputer',SimpleImputer(strategy="median")),
