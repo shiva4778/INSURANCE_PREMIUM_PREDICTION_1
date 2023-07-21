@@ -84,7 +84,7 @@ def view_experiment_history():
 @application.route('/train', methods=['GET', 'POST'])
 def train():
     message = ""
-    pipeline = Pipeline(config=Configuration(current_time_stamp=get_current_time_stamp()))
+    pipeline = Pipeline(config=Configuration(current_time_stamp=CURRENT_TIME_STAMP))
     if not Pipeline.experiment.running_status:
         message = "Training started."
         pipeline.start()
@@ -208,4 +208,4 @@ def render_log_dir(req_path):
 
 
 if __name__ == "__main__":
-    application.run()
+    application.run(host='0.0.0.0')
