@@ -20,7 +20,7 @@ class PredictPipeline:
     def predict(self,features):
         try:
             print("Before Loading")
-            model_file_path=r'insurance\component\model\model.pkl'
+            model_file_path=r'saved_models\20230707211336\model.pkl'
             logging.info(features)
             model=load_object(file_path=model_file_path)
             logging.info('after loading')
