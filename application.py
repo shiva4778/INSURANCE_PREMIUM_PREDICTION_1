@@ -4,25 +4,25 @@ from insurance.logger import logging
 from flask import Flask,redirect,url_for,render_template,request
 from insurance.pipeline.predict_pipeline import CustomData,PredictPipeline
 
-app=Flask(__name__)
+application=Flask(__name__)
 
-@app.route('/')
+@application.route('/')
 def welcome():
     return render_template('index.html')
 
-@app.route('/success/<int:score>')
+@application.route('/success/<int:score>')
 def success(score):
     
 
     return render_template('result.html',result=score)
 
 
-@app.route('/fail/<int:score>')
+@application.route('/fail/<int:score>')
 def fail(score):
     return "The Person has failed and the marks is "+ str(score)
 
 ### Result checker
-@app.route('/results/<int:marks>')
+@application.route('/results/<int:marks>')
 def results(marks):
     result=""
     if marks<50:
@@ -32,7 +32,7 @@ def results(marks):
     return redirect(url_for(result,score=marks))
 
 ### Result checker submit html page
-@app.route('/submit',methods=['POST','GET'])
+@application.route('/submit',methods=['POST','GET'])
 def submit():
     predicted_value=0
     if request.method=='POST':
@@ -56,4 +56,4 @@ def submit():
 
 
 if __name__=='__main__':
-    app.run(host='0.0.0.0')
+    application.run(host='0.0.0.0')
