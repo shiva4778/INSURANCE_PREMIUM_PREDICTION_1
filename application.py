@@ -5,6 +5,13 @@ from insurance.pipeline.predict_pipeline import CustomData, PredictPipeline
 
 application = Flask(__name__)
 
+application.config['DEBUG'] = True
+
+@application.errorhandler(Exception)
+def handle_error(e):
+    return f"An error occurred: {str(e)}", 500
+
+
 @application.route('/')
 def welcome():
     return render_template('index.html')
