@@ -32,9 +32,9 @@ def submit():
         features=CustomData(age=age,sex=sex,bmi=bmi,children=children,smoker=smoker,region=region).get_data_as_data_frame()
         predicted_value=PredictPipeline().predict(features)
 
-        
+    return redirect('result.html',result=predicted_value)
     
-    return redirect(url_for('success',score=predicted_value))
+    #return redirect(url_for('success',score=predicted_value))
 
     
 
