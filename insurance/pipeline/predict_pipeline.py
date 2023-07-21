@@ -1,11 +1,13 @@
-import sys
 import pandas as pd
 import numpy as np
+from insurance.component.model_evaluation import ModelEvaluation
 from insurance.constant import *
 from insurance.exception import InsuranceException
 from insurance.util.util import load_object
 from insurance.logger import logging
 from insurance.entity.artifact_entity import ModelEvaluationArtifact,DataTransformationArtifact,ModelPusherArtifact
+
+
 
 import os,sys
 
@@ -17,9 +19,8 @@ class PredictPipeline:
 
     def predict(self,features):
         try:
-            
             print("Before Loading")
-            model_file_path=r'insurance\artifact\model_trainer\2023-07-21-10-39-57\trained_model\model.pkl'
+            model_file_path=r'saved_models\20230707211336\model.pkl'
             logging.info(features)
             model=load_object(file_path=model_file_path)
             logging.info('after loading')
