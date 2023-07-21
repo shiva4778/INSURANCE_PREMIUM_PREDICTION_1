@@ -19,15 +19,11 @@ class PredictPipeline:
         try:
             
             print("Before Loading")
-            preprocessor_file_path=r'E:\Insurance_premium_prediction\insurance\artifact\data_transformation\2023-07-16-22-13-24\preprocessed\preprocessed.pkl'
-            model_file_path=r'E:\Insurance_premium_prediction\saved_models\20230707211336\model.pkl'
+            model_file_path=r'saved_models\20230707211336\model.pkl'
             logging.info(features)
-            preprocessor=load_object(file_path=preprocessor_file_path)
             model=load_object(file_path=model_file_path)
             logging.info('after loading')
             # Convert the input features to a pandas DataFrame with a single sample
-            
-
    
             preds = model.predict((features))
             return preds
