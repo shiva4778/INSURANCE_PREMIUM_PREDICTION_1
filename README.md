@@ -6,6 +6,30 @@
 
 Insurance prediction link :[http://insurance-premium-env.eba-ixerc9bf.us-east-1.elasticbeanstalk.com/]
 
+## High Level Design:
+
+URL: [https://drive.google.com/file/d/1JFj41q-xqeW9dk5pQCvXM59Tb2uVgfJH/view?usp=drive_link]
+
+## Low Level Design:
+
+URL: [https://drive.google.com/file/d/1CSKuU1HFmKh0QRwIGHvDZ-nijrt4Joiu/view?usp=drive_link]
+
+## Architecture:
+
+URL: [https://drive.google.com/file/d/1Pot1DjB_1z1N8sHy-9sUYkZY4V2-k2GG/view?usp=drive_link]
+
+## Detailed Project report:
+
+URL: [https://docs.google.com/presentation/d/1soY2AjsACvyOBd6u2z8b5PZ3RSn7AcTFYQ7Nb_Pa8U0/edit?usp=sharing]
+
+## Wireframe document:
+
+URL: [https://drive.google.com/file/d/1MBmcP_YOthLyIilMwtgiUQXPbMb2LEdH/view?usp=drive_link]
+
+## Demo video:
+
+URL: [https://drive.google.com/file/d/1fJCYhVKhZ86Mr6kI9yYdGvrCldkBTd6I/view?usp=drive_link]
+
 Language and Libraries
 
 python
