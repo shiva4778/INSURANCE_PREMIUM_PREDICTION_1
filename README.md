@@ -1,18 +1,34 @@
-***Shivanshu-Insurance_Price_prediction_ML_project_01***
+# Shivanshu-Insurance_Price_prediction_ML_project_01
 
-Application deployment link :
-Insurance Premium predictor
+## Application deployment link :
+
+[https://us-east-1.console.aws.amazon.com/codesuite/codepipeline/pipelines/insurance-pipeline/view?region=us-east-1]
+
+Insurance prediction link :[http://insurance-premium-env.eba-ixerc9bf.us-east-1.elasticbeanstalk.com/]
 
 Language and Libraries
-python pandas numpy  Seaborn 
 
-Software and account requirements.
-Github Account
-Heroku Account
-VS Code IDE
+python
+
+pandas 
+
+numpy
+
+Seaborn 
+
+Catboost
+
+## Software and account requirements.
+Github Account :[https://github.com/shiva4778/INSURANCE_PREMIUM_PREDICTION_1/edit/main/README.md]
+
+VS Code 
+
 GIT cli
+
 GIT Documentation
-Insurance Premium Prediction ML Project
+
+## Insurance Premium Prediction ML Project
+
 Life cycle of Machine learning Project
 
 * Understanding the Problem Statement
@@ -24,12 +40,13 @@ Life cycle of Machine learning Project
 * Choose best model
 Starting with the project :
 
-Understanding the Problem Statement:
+## Understanding the Problem Statement:
 The amount of the premium for a health insurance policy depends from person to person, as many factors affect the amount of the premium for a health insurance policy. Let’s say age, a young person is very less likely to have major health problems compared to an older person. Thus, treating an older person will be expensive compared to a young one. That is why an older person is required to pay a high premium compared to a young person.Just like age, many other factors affect the premium for a health insurance policy. Hope you now have understood what health insurance is and how the premium for a health insurance policy is determined.
 
 The goal of this project is to give people an estimate of how much they need based on their individual health situation. After that, customers can work with any health insurance carrier and its plans and perks while keeping the projected cost from our study in mind. This can assist a person in concentrating on the health side of an insurance policy rather han the ineffective part.
 
-Data Collection & understanding :
+## Data Collection & understanding :
+
 The dataset is collected from the following link : https://www.kaggle.com/datasets/noordeen/insurance-premium-prediction
 
 The dataset that I am using for the task of health insurance premium prediction is collected from Kaggle.
@@ -46,12 +63,13 @@ children : int - how many children the person is having
 smoker : object - whether the person smoke or not
 region : object - the region where the person lives
 expenses : float - the prememium amount of the insurance policy
-numerical_columns :
+
+### numerical_columns :
 
 age
 bmi
 children
-categorical_columns:
+### categorical_columns:
 
 sex
 smoker
@@ -74,13 +92,14 @@ smoker :
 sex :
 - male
 - female
-Starting with the project :
+## Starting with the project :
 Creating Conda environment
 
 conda create --prefix venv python==3.7 -y
 Activating the virtual environment
 
 conda activate venv/
+
 OR
 
 conda activate venv
@@ -124,11 +143,14 @@ ModelEvaluation
 ModelPusher
 Custom Exceptions and Logger are used in this Project for better debugging purposes.
 
-📷 Application Screenshots
+## 📷 Application Screenshots
 This is the screenshot of the Home Webpage which has been done using the Flask
 webpage
 
 This is the screenshot of the webpage which gets user input for prediction
+
+![Screenshot (133)](https://github.com/shiva4778/INSURANCE_PREMIUM_PREDICTION_1/assets/89657400/2589ad40-2bca-43b7-b7de-8561e62497c3)
+
 webpage
 
 This is the screenshot of the page which shows history of the experiment that had run previously and currently running status
@@ -141,7 +163,7 @@ model parameters
 This is the screenshot of the page in which user can train the model with update new parameters in Update Model Config section
 model parameters
 
-Conclusion
+## Conclusion
 This Project which predicts the amount of the insurance premium based on different parameters (like Age,BMI etc) for a particular person can be implemented practically and used by Insurance Comapnies in real life. This will help the companies to predict the estimate for Insurance premium for a particular person by considering the risk involved for that particular person."# INSURANCE_PREMIUM_PREDICTION_1" 
 "# INSURANCE_PREMIUM_PREDICTION_1" 
 "# INSURANCE_PREMIUM_PREDICTION_1" 
